@@ -38,35 +38,35 @@ You must adhere to some Kurrent Cloud requirements to access and use the sample 
     * If you didn't do so initially, please create a new cluster using this option.  (see image below)
 
 
-![alt_text](images/image1.png "image_tooltip")
+![alt_text](images/image1.png "A screen showing creation of a KurrentDB 24.10 cluster with System and User Projections enabled")
 
 
 ## Download Kurrent Navigator
 
-You will use **Kurrent Navigator** to explore various parts of the database UI.
+You will use **Kurrent Navigator** to explore various parts of the Kurrent UI.
 
 1. In your web browser, go to [https://navigator.kurrent.io](https://navigator.kurrent.io).
 
 
-![alt_text](images/image19.png "image_tooltip")
+![alt_text](images/image19.png "A screenshot of the https://navigator.kurrent.io website with download links at the bottom of the page")
 
 
 2. Scroll down and click the **Download** button next to your operating system to download the appropriate installer
-3. Double-Click the downloaded file and follow the on-screen instructions
+3. **Double-Click** the downloaded file and follow the on-screen instructions to install Kurrent Navigator
 
 
 ## Verifying Connectivity
 
-You will log into the administration portal using **Kurrent Navigator** to verify connectivity. 
+You will log into the Kurrent UI using **Kurrent Navigator** to verify connectivity. 
 
-1. Click the Addresses panel on the **Kurrent Cloud Console UI** **Clusters** page.
-2. In the GRPC row, click the URL that starts with `esdb+discover` to copy it to your clipboard
+1. Click the **Addresses** panel on the **Kurrent Cloud Console UI** **Clusters** page.
+2. In the **GRPC** row, click the **URL** that starts with `esdb+discover` to copy it to your clipboard
 
-![alt_text](images/image2.png "image_tooltip")
+![alt_text](images/image2.png "A screenshot highlighting the GRPC URL on the Kurrent CLoud Console UI Addresses panel")
 
 3. Launch **Kurrent Navigator** and paste your URL into the **Endpoint** box
 
-![alt_text](images/image20.png "image_tooltip")
+![alt_text](images/image20.png "A screenshot of Kurrent Navigator showing the Endpoint box")
 
 After pasting your URL into the Endpoint box, the **Status** at the bottom of the screen should say **Alive** as in the above screenshot
 
@@ -75,25 +75,25 @@ If your Status is **not** Alive, please skip to the “**[Adding your IP Address
 If your Status is Alive, click **Connect to database**
 
 
-![alt_text](images/image3.png "image_tooltip")
+![alt_text](images/image3.png "A screenshot of the credentials entry panel")
 
 
 4. Use your Admin Credentials to log in to the **Kurrent UI**. Access them on the **Kurrent Cloud Console UI** by clicking the **Security** tab, and then choosing **Admin Credentials**. Your default username is **admin**. You can copy your default password using the **Copy** button to the right of the **Password** box.
 
 
-![alt_text](images/image4.png "image_tooltip")
+![alt_text](images/image4.png "A screenshot of the Kurrent Cloud Console UI Security Credentials tab")
 
 
 5. Return to the Kurrent Navigator login screen.
 6. Enter **admin** as your Username, paste your password in the Password field, and click **Connect**. The **Dashboard** page will be displayed.
 
 
-![alt_text](images/image5.png "image_tooltip")
+![alt_text](images/image5.png "A screenshot of the Kurrent Navigator Dashboard panel")
 
 
 ## Adding your IP Address to the IP Access List
 
-If you receive a **403: Forbidden** message in your web browser, please ensure your IP Address is included in the IP Access List.  To do this:
+If your Status is **not** Alive in Kurrent Navigator, please ensure your IP Address is included in the IP Access List.  To do this:
 
 
 
@@ -102,40 +102,40 @@ If you receive a **403: Forbidden** message in your web browser, please ensure y
 3. Then select the link for your IP Access List (in the image below, this is “Cloud Tutorial Access List.”
 
 
-![alt_text](images/image6.png "image_tooltip")
+![alt_text](images/image6.png "A screenshot of the Kurrent Cloud Console UI Security tab showing the link to edit the IP Access List")
 
 
 4. Verify that your IP address is listed in the **Addresses** section of your IP Access List.
 
 
-![alt_text](images/image7.png "image_tooltip")
+![alt_text](images/image7.png "A screenshot of the Kurrent Cloud Console UI IP Access List with IP addresses")
 
 
 5. Click **Edit &lt;Your Access List Name>** if your IP address is not listed.
 
 
-![alt_text](images/image8.png "image_tooltip")
+![alt_text](images/image8.png "A screenshotn of the Kurrent Cloud Console UI IP Access List edit button")
 
 
 6. Select **Add My IP Address** to have the console determine and add your IP address to the list, or **Add Address** to enter your IP manually. When finished, click **Update IP access list**. 
 
 
-![alt_text](images/image9.png "image_tooltip")
+![alt_text](images/image9.png "A screenshot of the Kurrent Cloud Console UI IP Access List editing process")
 
 
 7. If you receive a Warning, confirm your IP access list update.
 
 
-![alt_text](images/image10.png "image_tooltip")
+![alt_text](images/image10.png "A screenshot of the IP Access List Confirmation of Edits panel")
 
 
 8. Once your IP has been successfully added to your environment, select **Details**.  The **Status** of the IP Access List should be **Active.**
 
 
-![alt_text](images/image11.png "image_tooltip")
+![alt_text](images/image11.png "A screenshot of the Kurrent Cloud Console UI IP Access List Details panel")
 
 
-9. Return to the [Verifying Connectivity](#heading=h.xt8exc6orhkx) section and repeat steps 1-3 to access the KurrentDB Web UI login screen. 
+9. Return to the [Verifying Connectivity](#heading=h.xt8exc6orhkx) section and repeat steps 1-3 to access the Kurrent UI login screen in Kurrent Navigator. 
 
 
 ## Accessing your Client URL
@@ -147,22 +147,22 @@ To operate the demo application, you’ll need your **Client URL**.
 1. In the **Kurrent Cloud Console UI**, click the **Connect to &lt;ClusterName>** button.
 
 
-![alt_text](images/image12.png "image_tooltip")
+![alt_text](images/image12.png "A screenshot of the Kurrent Cloud Console UI showing how to access the Cluster URL")
 
 
 2. The **Connection** pop-up will appear.
 
 
-![alt_text](images/image13.png "image_tooltip")
+![alt_text](images/image13.png "A screenshot of the Cluster Connection panel")
 
 
 3. Scroll down and select **Python** from the list of clients. The **Python** connection details will appear.  
 
 
-![alt_text](images/image14.png "image_tooltip")
+![alt_text](images/image14.png "A screenshot of the python connection information panel")
 
 
-4. Click the **Copy** button to the right of the esdb+discover... Client URL. It should look similar to this:
+4. Click the **Copy** button to the right of the `esdb+discover...` Client URL. It should look similar to this:
 
     ```
     esdb+discover://admin:1e6628e34efe480a9e395acbafa8613c@kurrentdb.cud2g7cgdub7p6skf1dg.cucin94gdub7p6skf0i0.sites.dev.eventstore.cloud:2113
@@ -205,7 +205,7 @@ Congratulations!  If you have reached this point, you have successfully set up K
 
 
 
-![alt_text](images/image15.png "image_tooltip")
+![alt_text](images/image15.png "A graphic describing the workflow and events of a sample loan processing system")
 
 
 The sample application will implement a basic loan application processing system. The application is comprised of four components:
@@ -322,24 +322,24 @@ underwriter-1  |
 NOTE: The above output is an example. Your output will vary, but all four processes should be running.
 
 
-## Step 4: Verify the output in the web UI
+## Step 4: Verify the output in the Kurrent UI
 
 Return to the **Kurrent UI** in Kurrent Navigator. Access the **Stream Browser** in the left side menu. Note that streams of **loanRequest-&lt;eventID>** are being created in the **Recently Created Streams** table:
 
 
-![alt_text](images/image16.png "image_tooltip")
+![alt_text](images/image16.png "A screenshot of the Kurrent Navigator Stream Browser")
 
 
 **Clicking a stream name** shows the events in that stream.
 
 
-![alt_text](images/image17.png "image_tooltip")
+![alt_text](images/image17.png "A screenshot of the events in a Stream in the Kurrent Navigator Stream Browser")
 
 
 Clicking an event displays the complete event information in the right-hand panel
 
 
-![alt_text](images/image18.png "image_tooltip")
+![alt_text](images/image18.png "A screenshot of the events in a Stream in the Kurrent Navigator Stream Browser")
 
 
 
