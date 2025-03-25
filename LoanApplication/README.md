@@ -19,7 +19,7 @@ This example application:
 * Demonstrates the methods to **append (write) and read** events to/from KurrentDB
 * Leverages **persistent and catch-up subscriptions** to receive streaming events
 * Introduces security concepts with **SSL/TLS and IP access lists**
-* Navigates the **KurrentDB Web UI to find streams and events**
+* Uses **Kurrent Navigator to find streams and events**
 * Works with **projections** to transform events from one form to another
 
 Ready to get started?  Let’s get the demo application working in your newly provisioned Kurrent Cloud environment!
@@ -41,32 +41,51 @@ You must adhere to some Kurrent Cloud requirements to access and use the sample 
 ![alt_text](images/image1.png "image_tooltip")
 
 
+## Download Kurrent Navigator
+
+You will use **Kurrent Navigator** to explore various parts of the database UI.
+
+1. In your web browser, go to [https://navigator.kurrent.io](https://navigator.kurrent.io).
+
+
+![alt_text](images/image19.png "image_tooltip")
+
+
+2. Scroll down and click the **Download** button next to your operating system to download the appropriate installer
+3. Double-Click the downloaded file and follow the on-screen instructions
+
+
 ## Verifying Connectivity
 
-You will log into the **KurrentDB Web UI** to verify connectivity. 
+You will log into the administration portal using **Kurrent Navigator** to verify connectivity. 
 
 1. Click the Addresses panel on the **Kurrent Cloud Console UI** **Clusters** page.
-2. The URL in the UI row is your unique KurrentDB Web UI address.
-3. Select the link.
-
+2. In the GRPC row, click the URL that starts with `esdb+discover` to copy it to your clipboard
 
 ![alt_text](images/image2.png "image_tooltip")
 
+3. Launch **Kurrent Navigator** and paste your URL into the **Endpoint** box
 
-After you select the link, the KurrentDB login screen should appear. If you reach this successfully, continue to step 4. If your web browser displays a **403: Forbidden** message, please skip to the “**[Adding your IP Address to the IP Access List](#heading=h.hfjipe2ehurh)**” section.  Once the actions required are complete, return to this section and repeat steps 1-3.
+![alt_text](images/image20.png "image_tooltip")
+
+After pasting your URL into the Endpoint box, the **Status** at the bottom of the screen should say **Alive** as in the above screenshot
+
+If your Status is not Alive, please skip to the “**[Adding your IP Address to the IP Access List](#heading=h.hfjipe2ehurh)**” section.  Once the actions required are complete, return to this section and repeat steps 1-3.
+
+If your Status is Alive, click **Connect to database**
 
 
 ![alt_text](images/image3.png "image_tooltip")
 
 
-4. Use your Admin Credentials to log in to the **KurrentDB Web UI**. Access them on the **Kurrent Cloud Console UI** by clicking the **Security** tab, and then choosing **Admin Credentials**. Your default username is **admin**. You can copy your default password using the **Copy** button to the right of the **Password** box.
+4. Use your Admin Credentials to log in to the **Kurrent UI**. Access them on the **Kurrent Cloud Console UI** by clicking the **Security** tab, and then choosing **Admin Credentials**. Your default username is **admin**. You can copy your default password using the **Copy** button to the right of the **Password** box.
 
 
 ![alt_text](images/image4.png "image_tooltip")
 
 
-5. Return to the KurrentDB login screen.
-6. Enter **admin** as your Username, paste your password in the Password field, and click **Sign In**. The **Dashboard** page will be displayed.
+5. Return to the Kurrent Navigator login screen.
+6. Enter **admin** as your Username, paste your password in the Password field, and click **Connect**. The **Dashboard** page will be displayed.
 
 
 ![alt_text](images/image5.png "image_tooltip")
