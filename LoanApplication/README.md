@@ -70,7 +70,7 @@ You will log into the administration portal using **Kurrent Navigator** to verif
 
 After pasting your URL into the Endpoint box, the **Status** at the bottom of the screen should say **Alive** as in the above screenshot
 
-If your Status is not Alive, please skip to the “**[Adding your IP Address to the IP Access List](#heading=h.hfjipe2ehurh)**” section.  Once the actions required are complete, return to this section and repeat steps 1-3.
+If your Status is **not** Alive, please skip to the “**[Adding your IP Address to the IP Access List](#heading=h.hfjipe2ehurh)**” section.  Once the actions required are complete, return to this section and repeat steps 1-3.
 
 If your Status is Alive, click **Connect to database**
 
@@ -324,7 +324,7 @@ NOTE: The above output is an example. Your output will vary, but all four proces
 
 ## Step 4: Verify the output in the web UI
 
-Return to the **KurrentDB Web UI** in your web browser. Navigate to the **Stream Browser** tab. Note that streams of **loanRequest-&lt;eventID>** are being created in the **Recently Created Streams** table:
+Return to the **Kurrent UI** in Kurrent Navigator. Access the **Stream Browser** in the left side menu. Note that streams of **loanRequest-&lt;eventID>** are being created in the **Recently Created Streams** table:
 
 
 ![alt_text](images/image16.png "image_tooltip")
@@ -336,7 +336,7 @@ Return to the **KurrentDB Web UI** in your web browser. Navigate to the **Stream
 ![alt_text](images/image17.png "image_tooltip")
 
 
-Clicking **JSON** next to an event displays the complete event information.
+Clicking an event displays the complete event information in the right-hand panel
 
 
 ![alt_text](images/image18.png "image_tooltip")
