@@ -83,37 +83,37 @@ If you receive a **403: Forbidden** message in your web browser, please ensure y
 3. Then select the link for your IP Access List (in the image below, this is “Cloud Tutorial Access List.”
 
 
-![alt_text](images/image6.png "image_tooltip")
+![alt_text](images/image6x.png "image_tooltip")
 
 
 4. Verify that your IP address is listed in the **Addresses** section of your IP Access List.
 
 
-![alt_text](images/image7.png "image_tooltip")
+![alt_text](images/image7x.png "image_tooltip")
 
 
 5. Click **Edit &lt;Your Access List Name>** if your IP address is not listed.
 
 
-![alt_text](images/image8.png "image_tooltip")
+![alt_text](images/image8x.png "image_tooltip")
 
 
 6. Select **Add My IP Address** to have the console determine and add your IP address to the list, or **Add Address** to enter your IP manually. When finished, click **Update IP access list**. 
 
 
-![alt_text](images/image9.png "image_tooltip")
+![alt_text](images/image9x.png "image_tooltip")
 
 
 7. If you receive a Warning, confirm your IP access list update.
 
 
-![alt_text](images/image10.png "image_tooltip")
+![alt_text](images/image10x.png "image_tooltip")
 
 
 8. Once your IP has been successfully added to your environment, select **Details**.  The **Status** of the IP Access List should be **Active.**
 
 
-![alt_text](images/image11.png "image_tooltip")
+![alt_text](images/image11x.png "image_tooltip")
 
 
 9. Return to the [Verifying Connectivity](#heading=h.xt8exc6orhkx) section and repeat steps 1-3 to access the KurrentDB Web UI login screen. 
@@ -128,7 +128,7 @@ To operate the demo application, you’ll need your **Client URL**.
 1. In the **Kurrent Cloud Console UI**, click the **Connect to &lt;ClusterName>** button.
 
 
-![alt_text](images/image12.png "image_tooltip")
+![alt_text](images/image12x.png "image_tooltip")
 
 
 2. The **Connection** pop-up will appear.
