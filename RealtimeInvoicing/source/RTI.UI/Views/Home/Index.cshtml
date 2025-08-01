@@ -1,0 +1,59 @@
+@inject RTI.UI.InvoiceListRm _rm
+@inject RTI.UI.CurrentBackplaneVm _backplaneVm;
+@inject IEnumerable<RTI.UI.ICheckpoints> _cards;
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h1>System Information</h1>
+<h2>Read Model Positions</h2>
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-8">
+            <div class="container-fluid">
+                <div class="row row-cols-1 row-cols-md-2">
+                    @foreach (var card in _cards) {
+                        <div class="col mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">@card.Name</h5>
+                                    <table class="table table-condensed">
+                                        <thead>
+                                            <tr>
+                                                <th>Stream</th>
+                                                <th>Position</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach (var pos in card.GetCheckpoints()) {
+                                                <tr>
+                                                    <td>@pos.Id</td>
+                                                    <td>@pos.Position</td>
+                                                </tr>
+                                            }
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+            <h1 class="h3">Current Backplane</h1>
+            <h2 class="h5">@_backplaneVm.CurrentBackplane.ToString()</h2>
+            @using(Html.BeginForm("SwitchBackplane", "Home", new { backplane = _backplaneVm.CurrentBackplane == EventStore.StreamConnectors.Backplanes.Direct ? EventStore.StreamConnectors.Backplanes.Kafka : EventStore.StreamConnectors.Backplanes.Direct }, FormMethod.Post)) {
+                <button type="submit" class="btn btn-primary">Use @(_backplaneVm.CurrentBackplane == EventStore.StreamConnectors.Backplanes.Direct ? EventStore.StreamConnectors.Backplanes.Kafka : EventStore.StreamConnectors.Backplanes.Direct)</button>
+            }
+        </div>
+    </div>
+</div>
+
+
+@section head {
+<meta http-equiv="refresh" content="2; URL=@Url.Action("Index", "Home")" />
+}

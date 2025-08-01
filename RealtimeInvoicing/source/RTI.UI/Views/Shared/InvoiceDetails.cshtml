@@ -1,0 +1,92 @@
+@using RTI.Models
+@model RTI.Models.Invoice
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-5">
+            <div class="mb-3">
+                <label class="form-label fw-bold">Invoice ID</label>
+                <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="@Model.Id">
+            </div>
+            <div class="mb-3">
+                <label class="form-label fw-bold">Account</label>
+                <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="@Model.AccountName">
+            </div>
+            <div class="mb-3">
+                <label class="form-label fw-bold">Date</label>
+                <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="@Model.Date">
+            </div>
+            <div class="mb-3">
+                <label class="form-label fw-bold">Payment Terms</label>
+                <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="@Model.PaymentTermsName">
+            </div>
+            <div class="mb-3">
+                <label class="form-label fw-bold">Status</label>
+                <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="@Model.Status">
+            </div>
+        </div>
+
+        <div class="col-7">
+            <div class="card">
+                <div class="card-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-12">
+                                <table class="table table-condensed">
+                                    <caption style="caption-side:top">Items</caption>
+                                    <thead>
+                                        <tr>
+                                            <td>SKU</td>
+                                            <td>Description</td>
+                                            <td>Qty/Price</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in Model.Items) {
+                                            <tr>
+                                                <td>@item.SKU</td>
+                                                <td>@item.Description</td>
+                                                <td>@item.Quantity &#64 @item.UnitPrice.ToDollars().ToString("C")</td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <table class="table table-condensed">
+                                    <caption style="caption-side:top">Payments</caption>
+                                    <tbody>
+                                        @foreach (var pmt in Model.Payments) {
+                                            <tr>
+                                                <td>@pmt.Amount.ToDollars().ToString("C")</td>
+                                                <td>@pmt.Received</td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-9 d-flex justify-content-end">Total:</div>
+                            <div class="col-3">@Model.Total.ToDollars().ToString("C")</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-9 d-flex justify-content-end">Payments:</div>
+                            <div class="col-3">@Model.PaymentsTotal.ToDollars().ToString("C")</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-9 d-flex justify-content-end">Balance Due:</div>
+                            <div class="col-3">@Model.BalanceDue.ToDollars().ToString("C")</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section head {
+<meta http-equiv="refresh" content="2; URL=@Url.Action("Details")" />
+    }

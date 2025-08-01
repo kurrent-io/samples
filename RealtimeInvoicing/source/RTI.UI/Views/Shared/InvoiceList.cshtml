@@ -1,0 +1,41 @@
+@using RTI.Models
+@model IEnumerable<RTI.Models.Invoice>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-10">
+            <table class="table table-condensed">
+                <thead>
+                    <tr>
+                        <th>Invoice ID</th>
+                        <th>Date</th>
+                        <th>Account Name</th>
+                        <th>Balance Due</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                @foreach (var item in Model.OrderByDescending(x => x.Date)) {
+                    <tr>
+                        <td>@item.Id</td>
+                        <td>@item.Date.ToShortDateString() - @item.Date.ToLongTimeString()</td>
+                        <td>@Html.ActionLink(@item.AccountName, "Details", new { id = @item.Id })</td>
+                        <td>@item.BalanceDue.ToDollars().ToString("C")</td>
+                        <td>@item.Status</td>
+                    </tr>
+                }
+            </table>
+        </div>
+        <div class="col-2">
+            <dl>
+            @foreach(var cp in ((RTI.Models.Checkpoint[])ViewBag.Checkpoints)) {
+                <dt>@cp.Id</dt>
+                <dd>@cp.Position</dd>
+            }
+            </dl>
+        </div>
+    </div>
+</div>
+
+
+@section head {
+<meta http-equiv="refresh" content="2; URL=@Url.Action("Index")" />
+}
