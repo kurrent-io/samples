@@ -1,25 +1,25 @@
 services:
   seeder:
     restart: always
-    image: "docker.eventstore.com/education/loan-application:0.1.0"
+    image: "docker.eventstore.com/education/loan-application:0.2.0"
     environment:
       - "DB_URL=${DB_URL?Error: DB_URL must be specified!}"
     command: ./shadowtraffic.sh
   creditcheck:
     restart: always
-    image: "docker.eventstore.com/education/loan-application:0.1.0"
+    image: "docker.eventstore.com/education/loan-application:0.2.0"
     environment:
       - "ESDB_URL=${DB_URL?Error: DB_URL must be specified!}"
     command: python3 CreditCheck.py
   decider:
     restart: always
-    image: "docker.eventstore.com/education/loan-application:0.1.0"
+    image: "docker.eventstore.com/education/loan-application:0.2.0"
     environment:
       - "ESDB_URL=${DB_URL?Error: DB_URL must be specified!}"
     command: python3 LoanDecider.py
   underwriter:
     restart: always
-    image: "docker.eventstore.com/education/loan-application:0.1.0"
+    image: "docker.eventstore.com/education/loan-application:0.2.0"
     environment:
       - "ESDB_URL=${DB_URL?Error: DB_URL must be specified!}"
     command: python3 Underwriting.py
